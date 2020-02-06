@@ -1,0 +1,35 @@
+{
+  "name": "inha_academy_prismagram",
+  "version": "1.0.0",
+  "description": "Blockchain with instagram Shoppingmall with Express + Prisma + React and React native",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooqii/Inha_Academy_prismagram.git"
+  },
+  "author": "Dongwook Lee <daniel@ceight.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wooqii/Inha_Academy_prismagram/issues"
+  },
+  "homepage": "https://github.com/wooqii/Inha_Academy_prismagram#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "dotenv": "^8.2.0",
+    "graphql-tools": "^4.0.6",
+    "graphql-yoga": "^1.18.3",
+    "merge-graphql-schemas": "^1.7.6",
+    "morgan": "^1.9.1",
+    "prisma-client-lib": "^1.34.10"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2"
+  },
+  "scripts": {
+    "deploy": "prisma deploy",
+    "generate": "prisma generate",
+    "prisma": "yarn run deploy && yarn run generate",
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}

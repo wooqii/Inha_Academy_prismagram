@@ -44,7 +44,7 @@ type File {
 }
 
 type Chat {
-  id: ID! @id
+  id: ID! @unique
   participants: [User!]!
   messages: [Message!]!
 }

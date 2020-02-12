@@ -8,7 +8,7 @@ Blockchain with instagram Shoppingmall with Express + Prisma + React and React n
 - [x] Request Secret
 - [x] Confirm Secret(Login)
 - [x] Like / Unlike a photo
-- [ ] Comment on a photo
+- [x] Comment on a photo
 - [ ] Search by User
 - [ ] Search by location
 - [ ] See user profile

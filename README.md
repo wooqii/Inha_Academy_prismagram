@@ -11,8 +11,8 @@ Blockchain with instagram Shoppingmall with Express + Prisma + React and React n
 - [x] Comment on a photo
 - [x] Search by User
 - [X] Search by location
-- [ ] See user profile
-- [ ] Edit my profile
+- [x] See user profile
+- [x] Edit my profile
 - [x] Follow / Unfollow User
 - [ ] See the full photo
 - [ ] Upload a photo

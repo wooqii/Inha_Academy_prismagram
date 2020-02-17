@@ -18,7 +18,7 @@ type Post {
   id: ID! @id
   location: String!
   caption: String!
-  creator: User!
+  user: User!
   files: [File!]!
   likes: [Like!]!
   comments: [Comment!]!
@@ -44,7 +44,7 @@ type File {
 }
 
 type Chat {
-  id: ID! @unique
+  id: ID! @id
   participants: [User!]!
   messages: [Message!]!
 }

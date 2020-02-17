@@ -18,3 +18,4 @@ Blockchain with instagram Shoppingmall with Express + Prisma + React and React n
 - [ ] Upload a photo
 - [ ] Edit the photo (Delete photo)
 - [ ] See the feed
+- [ ] Send private DM

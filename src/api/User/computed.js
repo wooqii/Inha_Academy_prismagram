@@ -1,48 +1,34 @@
-import {prisma} from '../../../generated/prisma-client';
+import { prisma } from "../../../generated/prisma-client";
 
 export default {
   User: {
     fullName: parent => {
       return `${parent.firstName} ${parent.lastName}`;
     },
-    isFollowing: async ( parent, _, { request } ) => {
-      const {user} = request;
-      const {id: parentid} = parent;
+    isFollowing: async (parent, _, { request }) => {
+      const { user } = request;
+      const { id: parentId } = parent;
       try {
-        return prisma.$exists.user ({
+        return prisma.$exists.user({
           AND: [
-            { id: user.id }, { following_some: { id: parentid}
+            {
+              id: user.id
+            },
+            {
+              following_some: {
+                id: parentId
+              }
             }
           ]
         });
-      } catch (error) {
+      } catch {
         return false;
       }
     },
-    isSelf: ( parent, _, { request }) => {
-      const {user} = request;
-      const {id: parentid} = parent;
-      return user.id === parentid;
-    }
-  },
-  Post: {
-    isLiked: (parent, _, { request }) => {
+    isSelf: (parent, _, { request }) => {
       const { user } = request;
-      const { id } = parent;
-      return prisma.$exists.like({
-        AND: [
-          {
-            user: {
-              id: user.id
-            }
-          },
-          {
-            post: {
-              id
-            }
-          }
-        ]
-      });
+      const { id: parentId } = parent;
+      return user.id === parentId;
     }
   }
 };

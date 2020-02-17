@@ -15,8 +15,6 @@ type User {
   comments: [Comment!]!
   chat: [Chat!]!
   loginSecret: String!
-  createdAt: String
-  updatedAt: String
 }
 
 type Post {
@@ -62,8 +60,6 @@ type Chat {
   id: ID!
   participants: [User!]!
   messages: [Message!]!
-  createdAt: String
-  updatedAt: String
 }
 
 type Message {
@@ -72,13 +68,9 @@ type Message {
   from: User!
   to: User!
   chat: Chat!
-  createdAt: String
-  updatedAt: String
 }
 
 type UserProfile {
   user: User!
   posts: [Post!]!
-  createdAt: String
-  updatedAt: String
 }

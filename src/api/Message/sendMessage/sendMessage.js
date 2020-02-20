@@ -1,5 +1,5 @@
-import { prisma } from "../../../generated/prisma-client";
-import { CHAT_FRAGMENT } from "../../fragment";
+import { prisma } from "../../../../generated/prisma-client";
+import { CHAT_FRAGMENT } from "../../../fragment";
 
 export default {
     Mutation: {

@@ -9,11 +9,7 @@ export default {
             return {
                 user,
                 posts
-<<<<<<< HEAD
             };
-=======
-            }
->>>>>>> master
         }
     }
 };

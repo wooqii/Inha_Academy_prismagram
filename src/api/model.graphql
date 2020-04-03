@@ -4,14 +4,21 @@ type User {
   email:String! 
   firstName:String
   lastName:String
+  fullName:String
   bio:String
   following:[User!]!
   followers:[User!]! 
+  amIFollowing: Boolean!
   posts:[Post!]!
   likes:[Like!]!
   comments:[Comment!]!
   chat:[Chat!]!
   loginSecret: String!
+}
+
+type UserProfile {
+  user: User
+  posts: [Post!]!
 }
 
 type Post {
@@ -21,6 +28,7 @@ type Post {
   creator:User!
   files: [File!]!
   likes: [Like!]!
+  isLiked: Boolean!
   comments: [Comment!]!
 }
 

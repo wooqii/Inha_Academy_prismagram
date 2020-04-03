@@ -1,6 +1,10 @@
 import { isAuthenticated } from "../../../middleware";
 import { prisma } from "../../../../generated/prisma-client";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 export default {
     Mutation: {
         follow: async(_, args,{ request } ) => {

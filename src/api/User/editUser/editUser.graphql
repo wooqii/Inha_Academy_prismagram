@@ -4,5 +4,11 @@ type Mutation {
         email: String 
         firstName: String 
         lastName: String
+<<<<<<< HEAD
         bio: String): User!
+=======
+        bio: String
+        avatar: String
+    ): User!
+>>>>>>> master
 }

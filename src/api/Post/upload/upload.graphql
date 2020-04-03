@@ -1,3 +1,7 @@
 type Mutation {
+<<<<<<< HEAD
     upload(caption: String!, files: [String!]! ): Post!
+=======
+    upload( caption: String!, location: String, files: [String!]! ): Post!
+>>>>>>> master
 }

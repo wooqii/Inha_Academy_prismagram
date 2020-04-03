@@ -3,7 +3,7 @@ import { prisma } from "../../../../generated/prisma-client";
 
 export default {
   Mutation: {
-    toggleLike: async (_, args, { request }) => {
+      toggleLike: async (_, args, { request } ) => {
       isAuthenticated(request);
       const { postId } = args;
       const { user } = request;
@@ -24,7 +24,7 @@ export default {
       try {
         const existingLike = await prisma.$exists.like(filterOptions);
         if (existingLike) {
-          await prisma.deleteManyLikes(filterOptions); //TODO 였던부분
+          await prisma.deleteManyLikes(filterOptions);
         } else {
           await prisma.createLike({
             user: {
@@ -42,6 +42,7 @@ export default {
         return true;
       } catch {
         return false;
+        
       }
     }
   }

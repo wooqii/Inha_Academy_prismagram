@@ -1,3 +1,7 @@
 type Mutation {
+<<<<<<< HEAD
     follow(id: String!): Boolean
+=======
+    follow(id: String!): Boolean!
+>>>>>>> master
 }

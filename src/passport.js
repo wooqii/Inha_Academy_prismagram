@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 import passport from "passport";
 import { Strategy, ExtractJwt } from "passport-jwt";
 import { prisma } from "../generated/prisma-client";
@@ -20,6 +24,7 @@ const verifyUser = async (payload, done) => {
     }
 };
 
+<<<<<<< HEAD
 export const authenticateJwt = (req, res, next) => 
     passport.authenticate("jwt", { session: false }, (error,user) => {
         if (user) {
@@ -29,4 +34,15 @@ export const authenticateJwt = (req, res, next) =>
     }) (req, res, next);
 
 passport.use(new Strategy(jwtOptions, verifyUser ));
+=======
+
+export const authenticateJwt = (req, res, next) => passport.authenticate("jwt", {sessions: false }, (error,user) => {
+    if (user) {
+        req.user = user;
+    }
+    next();
+}) (req, res, next);
+
+passport.use(new Strategy( jwtOptions, verifyUser ));
+>>>>>>> master
 passport.initialize();

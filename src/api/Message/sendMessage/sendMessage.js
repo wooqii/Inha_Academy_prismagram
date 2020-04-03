@@ -1,5 +1,9 @@
 import { prisma } from "../../../../generated/prisma-client";
+<<<<<<< HEAD
 import { CHAT_FRAGMENT } from "../../../fragments";
+=======
+import { CHAT_FRAGMENT } from "../../../fragment";
+>>>>>>> master
 
 export default {
     Mutation: {

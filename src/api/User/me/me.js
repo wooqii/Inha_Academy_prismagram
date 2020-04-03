@@ -12,5 +12,14 @@ export default {
         posts
       };
     }
+<<<<<<< HEAD
   } 
+=======
+  },
+  User: {
+    fullName: parent => {
+      return `${parent.firstName} ${parent.lastName}`;
+    }
+  }
+>>>>>>> master
 };

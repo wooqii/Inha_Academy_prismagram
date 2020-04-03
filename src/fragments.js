@@ -1,7 +1,7 @@
 export const USER_FRAGMENT = `
     id
     username
-		avatar
+    avatar
 `;
 
 export const COMMENT_FRAGMENT = `
@@ -30,6 +30,30 @@ export const FULL_POST_FRAGMENT = `
         }
         creator {
             ${USER_FRAGMENT}
+        }
+    }
+`;
+
+// 업데이트 된부분
+export const MESSAGE_FRAGMENT = ` 
+    id 
+    text 
+    to {
+        ${USER_FRAGMENT}
+    }
+    from {
+        ${USER_FRAGMENT}
+    }
+`;
+
+export const CHAT_FRAGMENT = `
+    fragment ChatParts on Chat {
+        id
+        participants {
+            ${USER_FRAGMENT}
+        }
+        messages {
+            ${MESSAGE_FRAGMENT}
         }
     }
 `;

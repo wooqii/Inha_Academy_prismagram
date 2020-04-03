@@ -1,9 +1,5 @@
 import { prisma } from "../../../../generated/prisma-client";
-<<<<<<< HEAD
 import { COMMENT_FRAGMENT, FULL_POST_FRAGMENT } from "../../../fragments";
-=======
-import { COMMENT_FRAGMENT, FULL_POST_FRAGMENT } from "../../../fragment";
->>>>>>> master
 
 export default {
   Query: {
